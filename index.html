@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+
+      *,
+      html,
+      body,
+      p {
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin-top: 10%;
+      }
+
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .calc-container {
+        display: grid;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+      .dot {
+        grid-column: span 2;
+      }
+      .button-operator-equal {
+        grid-row: span 2;
+      }
+      #buttons-container {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        text-align: center;
+      }
+      /* Display */
+      #display {
+        width: 100%;
+        padding-right: 10px;
+        font-size: 3em;
+        text-align: right;
+        height: 2em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #fdfefe;
+        background-color: #000000;
+        border: 2px solid #e73018;
+        transition: all 0.3s ease-in;
+      }
+      /* buttons */
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        border: 0.3px solid rgba(251, 253, 255, 0.171);
+      }
+      .button-num {
+        background-color: #000000;
+        color: #e73018;
+      }
+      .button-num:hover {
+        background-color: #ffffff;
+      }
+      .button-operator {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      .button-operator:hover {
+        background-color: #e73018;
+      }
+
+      .button-operator-equal {
+        background-color: #e73018;
+      }
+      .button-operator-equal:hover {
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="calc-container">
+        <div id="display" class=""></div>
+        <div id="buttons-container">
+          <button class="button-operator" onclick="clearInput()">C</button>
+          <button class="button-operator" onclick="removeNum()">⌦</button>
+          <button class="button-operator" onclick="inputNum('/')">/</button>
+          <button class="button-operator" onclick="inputNum('*')">x</button>
+
+          <button class="button-num" onclick="inputNum(7)">7</button>
+          <button class="button-num" onclick="inputNum(8)">8</button>
+          <button class="button-num" onclick="inputNum(9)">9</button>
+          <button class="button-operator" onclick="inputNum('-')">-</button>
+
+          <button class="button-num" onclick="inputNum(4)">4</button>
+          <button class="button-num" onclick="inputNum(5)">5</button>
+          <button class="button-num" onclick="inputNum(6)">6</button>
+          <button class="button-operator" onclick="inputNum('+')">+</button>
+
+          <button class="button-num" onclick="inputNum(1)">1</button>
+          <button class="button-num" onclick="inputNum(2)">2</button>
+          <button class="button-num" onclick="inputNum(3)">3</button>
+          <button class="button-operator-equal" onclick="equalTo()">=</button>
+          <button class="button-num dot" onclick="inputNum(0)">0</button>
+          <button class="button-num" onclick="inputNum('.')">.</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
