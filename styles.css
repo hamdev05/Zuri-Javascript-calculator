@@ -1,9 +1,6 @@
     @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 
-    *,
-    html,
-    body,
-    p {
+    *, html, body, p {
         box-sizing: border-box;
         font-family: "Noto Sans", sans-serif;
         margin: 0;
