@@ -1,21 +1,15 @@
- // Value input variable
-      const displayScreen = document.getElementById("display");
 
-      // Input number on display screen
-      const inputNum = (num) => (displayScreen.textContent += num);
+// Value input variable
+const displayScreen = document.getElementById("display");
 
-      // Do operation using eval()
-      const equalTo = () =>
-        displayScreen.textContent
-          ? (displayScreen.textContent = eval(displayScreen.textContent))
-          : false;
+ // Input number on display screen
+const inputNum = (num) => (displayScreen.textContent += num);
 
-      // Remove 1 val at time
-      const removeNum = () =>
-        (displayScreen.textContent = displayScreen.textContent.substring(
-          0,
-          displayScreen.textContent.length - 1
-        ));
+// Do operation using eval()
+const equalTo = () => displayScreen.textContent? (displayScreen.textContent = eval(displayScreen.textContent)): false;
 
-      // Clear all the input
-      const clearInput = () => (displayScreen.textContent = "");
+// Remove 1 val at time
+const removeNum = () => (displayScreen.textContent = displayScreen.textContent.substring(0, displayScreen.textContent.length - 1));
+
+// Clear all the input
+const clearInput = () => (displayScreen.textContent = "");
