@@ -1,4 +1,4 @@
-      // Value input variable
+ // Value input variable
       const displayScreen = document.getElementById("display");
 
       // Input number on display screen
